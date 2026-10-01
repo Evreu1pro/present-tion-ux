@@ -1,0 +1,3 @@
+const { chromium } = require('playwright');
+const path = require('path');
+(async()=>{const browser=await chromium.launch({headless:true,executablePath:'/usr/local/bin/chromium'});for(const [html,png] of [['shop-a.html','assets/fake-shop-a.png'],['shop-b.html','assets/fake-shop-b.png']]){const context=await browser.newContext({viewport:{width:1440,height:900},deviceScaleFactor:2});const page=await context.newPage();await page.goto('file://'+path.join('/data/per-la-donna-mockups',html),{waitUntil:'load'});await page.screenshot({path:path.join('/data/per-la-donna-mockups',png),fullPage:false});await context.close();}await browser.close();})();
