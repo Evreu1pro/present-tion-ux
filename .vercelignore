@@ -1,0 +1,8 @@
+# Arbeitsdateien – werden nicht veröffentlicht
+*.md
+presentation/prompts/
+presentation/per-la-donna-mockups/*.html
+presentation/per-la-donna-mockups/*.js
+presentation/per-la-donna-mockups/README.txt
+# Eigenständige Fake-Shop-Mockups nur lokal (siehe README.txt: nicht veröffentlichen)
+presentation/Fake-Shop-Boutique-Klassik.html
